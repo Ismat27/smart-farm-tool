@@ -1,38 +1,79 @@
-.App {
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 12px;
+}
+
+.form-section {
+  padding-block: 50px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-section h1 {
   text-align: center;
+  color: var(--deep-green);
+  line-height: 33px;
+  font-weight: 400;
+  letter-spacing: 0.045em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form label {
+  text-transform: capitalize;
+  color: #121212;
+  font-weight: 500;
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-field {
+  margin-bottom: 30px;
+}
+.form-field > div {
+  margin-top: 5px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+.form-field + button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--deep-green);
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #F8F8F8;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input, select {
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 16px
+}
+
+.alt-btns button {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  letter-spacing: 0.045em;
+  gap: 40px;
+  width: 100%;
+  font-size: 16px;
+  color: #F8F8F8;
 }
 
-.App-link {
-  color: #61dafb;
+.alt-btns .fb-btn {
+  background-color: #2E5C98;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alt-btns svg {
+  font-size: 30px;
 }
