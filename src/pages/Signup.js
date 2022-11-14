@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import AccountType from '../components/AccountType'
-import NavOne from '../NavOne'
+import NavOne from '../components/NavOne'
 
 import { SiFacebook } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'

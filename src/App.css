@@ -38,7 +38,7 @@ form label {
   border-radius: 15px;
   padding: 10px 20px;
 }
-.form-field + button {
+.form-field + button, .form-submit {
   display: block;
   width: 100%;
   border: none;

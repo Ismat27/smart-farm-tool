@@ -1,6 +1,7 @@
 :root {
   --deep-green: #004B23;
   --light-green: #006400;
+  --grey-one: #808080;
 }
 
 * {
@@ -8,6 +9,9 @@
   font-family: 'League Spartan', sans-serif;
   margin: 0;
   padding: 0;
+}
+p {
+  font-size: 18px;
 }
 ul {
   list-style: none;

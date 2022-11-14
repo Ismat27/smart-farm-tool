@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { SiFacebook } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
-import NavOne from '../NavOne'
+import NavOne from '../components/NavOne'
 
 const Login = () => {
   return (

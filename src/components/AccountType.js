@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { GiFarmer } from 'react-icons/gi'
 import {IoCheckmarkCircleSharp} from 'react-icons/io5'
-import { HiUserPlus } from 'react-icons/hi2'
+import { MdOutlineEngineering } from 'react-icons/md'
 import styled from 'styled-components'
 
 const AccountType = ({accountType, setAccountType}) => {
@@ -25,7 +25,7 @@ const AccountType = ({accountType, setAccountType}) => {
               expert account
               {accountType === 'expert' && <IoCheckmarkCircleSharp/>}
           </p>
-          <p className='icon'><HiUserPlus /></p>
+          <p className='icon'><MdOutlineEngineering /></p>
       </div>
     </Wrapper>
   )
