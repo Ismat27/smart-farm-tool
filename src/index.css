@@ -23,7 +23,7 @@ body {
   margin: 0;
   background: #F8F8F8;
 }
-header {
+header, .page-center {
   width: 90%;
   max-width: 1200px;
   margin: auto;
@@ -37,7 +37,7 @@ code {
 }
 
 @media (min-width: 768px) {
-  header {
+ .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;

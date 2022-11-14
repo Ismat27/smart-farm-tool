@@ -9,7 +9,7 @@ const NavOne = () => {
             setOpenMenu(prev => !prev)
     }
   return (
-    <Wrapper className='nav-container page-center'>
+    <Wrapper className='page-center nav-container'>
         <div className='page-header'>
             <Logo />
             <div
@@ -24,7 +24,13 @@ const NavOne = () => {
         <nav className={openMenu? 'nav nav-open': 'nav'}>
             <ul className={openMenu? 'nav-items open': 'nav-items'}>
                 <li className='nav-item'>
+                    <NavLink className={'nav-link'}>about us</NavLink>
+                </li>
+                <li className='nav-item'>
                     <NavLink className={'nav-link'}>pricing</NavLink>
+                </li>
+                <li className='nav-item'>
+                    <NavLink className={'nav-link'}>blog</NavLink>
                 </li>
                 <li className='nav-item'>
                     <NavLink className={'nav-link'} to={'/login'}>sign in</NavLink>
@@ -69,18 +75,15 @@ const Wrapper = styled.div`
 .menu-open .last {
     transform: translateY(-8px) rotate(-45deg);
 }
-.menu-open {
-    .first, .middle, .last {
-        margin-bottom: 0;
-    }
-}
 .nav {
+    text-align: center;
+    background-color: var(--light-green);
     height: 0;
     overflow: hidden;
     transition: all 500ms ease-in-out;
 }
 .nav-open {
-    height: 100px;
+    height: 150px;
 }
 .nav-items {
     padding-top: 1rem;
@@ -88,11 +91,8 @@ const Wrapper = styled.div`
         padding: 5px 0;
     }
 } 
-.nav-items.open {
-    height: auto;
-}
 .nav-link {
-    color: var(--deep-green);
+    color: white;
     text-transform: capitalize;
     font-weight: 500;
     font-size: 1.2rem;
@@ -104,7 +104,7 @@ const Wrapper = styled.div`
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     padding-top: 0;
     li {
         padding: 0;

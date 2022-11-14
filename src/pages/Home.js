@@ -1,8 +1,13 @@
 import React from 'react'
+import NavTwo from '../components/NavTwo'
+import Hero from '../components/Hero'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <NavTwo />
+      <Hero />
+    </>
   )
 }
 
