@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import AccountType from '../components/AccountType'
+import NavOne from '../NavOne'
 
 import { SiFacebook } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
@@ -10,73 +11,76 @@ const Signup = () => {
 
     const [accountType, setAccountType] = useState('farmer')
   return (
-    <Wrapper className='form-section'>
-        <h1>create an account</h1>
-        <AccountType accountType={accountType} setAccountType={setAccountType} />
-        <form>
-            <article className='form-field'>
-                <label>full name</label>
-                <div>
-                    <input
-                        placeholder='Enter full name'
-                        required
-                    />
-                </div>
-            </article>
-            <article className='form-field'>
-                <label>email address</label>
-                <div>
-                    <input
-                        placeholder='Enter email address'
-                        type={'email'}
-                        required
-                    />
-                </div>
-            </article>
-            {
-            accountType === 'expert' &&
-            <article className='form-field'>
-                <label htmlFor='designation'>designation</label>
-                <div>
-                    <select id='designation'>
-                        <option value={''}>select designation</option>
-                    </select>
-                </div>
-            </article>
-            }
-            <article className='form-field'>
-                <label>password</label>
-                <div>
-                    <input
-                        placeholder='Set password'
-                        type={'password'}
-                        required
-                    />
-                </div>
-            </article>
-            <article className='form-field'>
-                <label>confirm password</label>
-                <div>
-                    <input
-                        placeholder='Confirm password'
-                        type={'password'}
-                        required
-                    />
-                </div>
-            </article>
-            <button className='btn proceed'>proceed</button>
-        </form>
-        <div className='alt'>
-            <p></p>
-            <span>OR</span>
-            <p></p>
-        </div>
-        <div className='alt-btns'>
-            <button className='btn google-btn'><FcGoogle/>Sign up with Google</button>
-            <button className='btn fb-btn'><SiFacebook/>Sign up with Facebook</button>
-        </div>
-        <p className='login'>Already have an account? <Link to={'/login'}>Sign in</Link> </p>
-    </Wrapper>
+    <>
+        <NavOne />
+        <Wrapper className='form-section'>
+            <h1>create an account</h1>
+            <AccountType accountType={accountType} setAccountType={setAccountType} />
+            <form>
+                <article className='form-field'>
+                    <label>full name</label>
+                    <div>
+                        <input
+                            placeholder='Enter full name'
+                            required
+                        />
+                    </div>
+                </article>
+                <article className='form-field'>
+                    <label>email address</label>
+                    <div>
+                        <input
+                            placeholder='Enter email address'
+                            type={'email'}
+                            required
+                        />
+                    </div>
+                </article>
+                {
+                accountType === 'expert' &&
+                <article className='form-field'>
+                    <label htmlFor='designation'>designation</label>
+                    <div>
+                        <select id='designation'>
+                            <option value={''}>select designation</option>
+                        </select>
+                    </div>
+                </article>
+                }
+                <article className='form-field'>
+                    <label>password</label>
+                    <div>
+                        <input
+                            placeholder='Set password'
+                            type={'password'}
+                            required
+                        />
+                    </div>
+                </article>
+                <article className='form-field'>
+                    <label>confirm password</label>
+                    <div>
+                        <input
+                            placeholder='Confirm password'
+                            type={'password'}
+                            required
+                        />
+                    </div>
+                </article>
+                <button className='btn proceed'>proceed</button>
+            </form>
+            <div className='alt'>
+                <p></p>
+                <span>OR</span>
+                <p></p>
+            </div>
+            <div className='alt-btns'>
+                <button className='btn google-btn'><FcGoogle/>Sign up with Google</button>
+                <button className='btn fb-btn'><SiFacebook/>Sign up with Facebook</button>
+            </div>
+            <p className='login'>Already have an account? <Link to={'/login'}>Sign in</Link> </p>
+        </Wrapper>
+    </>
   )
 }
 

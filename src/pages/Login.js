@@ -1,46 +1,52 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { SiFacebook } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
+import NavOne from '../NavOne'
 
 const Login = () => {
   return (
-    <Wrapper className='form-section'>
-    <h1>sign into your account</h1>
-    <div className='alt-btns'>
-      <button className='btn google-btn'><FcGoogle/>Sign in with Google</button>
-      <button className='btn fb-btn'><SiFacebook/>Sign in with Facebook</button>
-    </div>
-    <div className='alt'>
-        <p></p>
-        <span>OR</span>
-        <p></p>
-    </div>
-      <form>
-        <article className='form-field'>
-          <label>email address</label>
-          <div>
-            <input
-                placeholder='Enter email address'
-                type={'email'}
-                required
-            />
-          </div>
-        </article>
-        <article className='form-field'>
-            <label>password</label>
+    <>
+    <NavOne/>
+      <Wrapper className='form-section'>
+      <h1>sign into your account</h1>
+      <div className='alt-btns'>
+        <button className='btn google-btn'><FcGoogle/>Sign in with Google</button>
+        <button className='btn fb-btn'><SiFacebook/>Sign in with Facebook</button>
+      </div>
+      <div className='alt'>
+          <p></p>
+          <span>OR</span>
+          <p></p>
+      </div>
+        <form>
+          <article className='form-field'>
+            <label>email address</label>
             <div>
               <input
-                  placeholder='Enter password'
-                  type={'password'}
+                  placeholder='Enter email address'
+                  type={'email'}
                   required
               />
             </div>
-        </article>
-        <button className='btn proceed'>sign in</button>
-      </form>
-      <p>Forget password?</p>
-    </Wrapper>
+          </article>
+          <article className='form-field'>
+              <label>password</label>
+              <div>
+                <input
+                    placeholder='Enter password'
+                    type={'password'}
+                    required
+                />
+              </div>
+          </article>
+          <button className='btn proceed'>sign in</button>
+        </form>
+        <p>Forget password?</p>
+        <p className='login'>Don't have an account? <Link to={'/signup'}>Sign up</Link> </p>
+      </Wrapper>
+    </>
   )
 }
 
@@ -80,6 +86,17 @@ form + p {
   margin-top: 10px;
   font-size: 18px;
   color: var(--light-green)
+}
+.login {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    a {
+        color: var(--light-green)
+    }
 }
 `
 
