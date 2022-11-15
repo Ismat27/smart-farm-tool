@@ -9,7 +9,7 @@ const PlantCareResult = () => {
         <h1>Result of diagnosis</h1>
         <div className='img-container'>
             <p>file uploaded</p>
-            <img src={ plantImage }/>
+            <img src={ plantImage } alt='plant'/>
         </div>
         <div className='results'>
             <article>

@@ -53,7 +53,7 @@ const PlantCareForm = () => {
                     plantImage &&
                 <div className='img-container'>
                     <p>file uploaded</p>
-                    <img src={plantImage}/>
+                    <img src={plantImage} alt='plant uploaded'/>
                 </div>
                 }
                 <div className='notes-container'>
