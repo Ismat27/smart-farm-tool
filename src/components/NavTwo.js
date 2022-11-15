@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from './Logo'
+import Hamburger from './Hamburger'
 
 const NavOne = () => {
     const [openMenu, setOpenMenu] = useState(false)
@@ -12,14 +13,7 @@ const NavOne = () => {
     <Wrapper className='page-center nav-container'>
         <div className='page-header'>
             <Logo />
-            <div
-                className={openMenu ? "menu menu-open" : "menu"}
-                onClick={handleClick}
-            >
-                <div className="first"></div>
-                <div className="middle"></div>
-                <div className="last"></div>
-            </div>
+            <Hamburger open={openMenu} handleClick={handleClick} />
         </div>
         <nav className={openMenu? 'nav nav-open': 'nav'}>
             <ul className={openMenu? 'nav-items open': 'nav-items'}>
@@ -48,32 +42,6 @@ const Wrapper = styled.div`
 .page-header {
     display: flex;
     justify-content: space-between;
-}
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: center;
-    align-items: center;
-}
-.first,
-.middle,
-.last {
-    background-color: var(--deep-green);
-    height: 4px;
-    border-radius: 50px;
-    box-shadow: 0px 0.4px 0.8px rgba(255, 255, 255, 0.3);
-    transition: all 500ms ease-in-out;
-    width: 24px;
-}
-.menu-open .first {
-    transform: translateY(8px) rotate(45deg);
-}
-.menu-open .middle {
-    width: 0px;
-}
-.menu-open .last {
-    transform: translateY(-8px) rotate(-45deg);
 }
 .nav {
     text-align: center;

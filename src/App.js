@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import VerifyAccount from './pages/VerifyAccount';
+import DashboardLayout from './components/DashboardLayout';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Route path='signup' element={<Signup />}/>
         <Route path='login' element={<Login/>} />
         <Route path='verify-account' element={<VerifyAccount/>} />
+        <Route path='dashboard' element={<DashboardLayout />}>
+          <Route index element={<h2>all is well</h2>} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

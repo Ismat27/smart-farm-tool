@@ -2,6 +2,7 @@
   --deep-green: #004B23;
   --light-green: #006400;
   --grey-one: #808080;
+  --transition: all 0.3s linear;
 }
 
 * {
@@ -27,6 +28,43 @@ header, .page-center {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.first,
+.middle,
+.last {
+  background-color: var(--deep-green);
+  height: 4px;
+  border-radius: 50px;
+  box-shadow: 0px 0.4px 0.8px rgba(255, 255, 255, 0.3);
+  transition: all 500ms ease-in-out;
+  width: 24px;
+}
+.menu-open .first {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-open .middle {
+  width: 0px;
+}
+.menu-open .last {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.sidebar {
+  transform: translate(-100%);
+  transition: var(--transition);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.sidebar-open {
+  transform: translate(0%);
 }
 .logo-img {
   width: 200px;
