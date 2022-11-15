@@ -8,7 +8,7 @@ import { HiOutlineUserGroup } from 'react-icons/hi'
 export const links = [
     {
         id: 1,
-        url: '',
+        url: 'dashboard',
         text: 'dashboard',
         icon: <TbLayoutDashboard />
     },

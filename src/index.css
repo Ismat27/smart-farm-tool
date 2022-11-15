@@ -2,6 +2,7 @@
   --deep-green: #004B23;
   --light-green: #006400;
   --grey-one: #808080;
+  --white-bg: #F8F8F8;
   --transition: all 0.3s linear;
 }
 
@@ -22,7 +23,10 @@ img {
 }
 body {
   margin: 0;
-  background: #F8F8F8;
+  background: var(--white-bg);
+}
+.file-input {
+  display: none;
 }
 header, .page-center {
   width: 90%;

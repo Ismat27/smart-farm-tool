@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { AppProvider } from './components/context';
+import { PlantCareProvider } from './plant_care_context';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <PlantCareProvider>
+        <App />
+      </PlantCareProvider>
     </AppProvider>
   </React.StrictMode>
 );
