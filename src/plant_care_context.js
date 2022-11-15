@@ -8,12 +8,19 @@ const PlantCareProvider = ({children}) => {
     const [plantImage, setPlantImage] = useState('')
     const [plantFile, setPlantFile] = useState('')
 
+    const returnHome = () => {
+        setPlantFile('')
+        setPlantImage('')
+        setDiagnosed(false)
+    }
+
     return (
         <PlantContext.Provider value={
             {
                 diagnosed, setDiagnosed,
                 plantImage, setPlantImage,
                 plantFile, setPlantFile,
+                returnHome
             }
         }>
             {children}

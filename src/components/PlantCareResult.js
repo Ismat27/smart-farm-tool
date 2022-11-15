@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { usePlantCare } from '../plant_care_context'
 
 const PlantCareResult = () => {
-    const { plantImage } = usePlantCare()
+    const { plantImage, returnHome} = usePlantCare()
+
+
   return (
     <Wrapper>
         <h1>Result of diagnosis</h1>
@@ -43,7 +45,7 @@ const PlantCareResult = () => {
         </div>
         <div className='action-btns'>
             <button className='btn chat'>Chat with Expert</button>
-            <button className='btn return-home'>Return Home</button>
+            <button onClick={() => returnHome()} className='btn return-home'>Return Home</button>
         </div>
     </Wrapper>
   )
