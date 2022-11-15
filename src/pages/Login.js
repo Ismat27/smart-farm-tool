@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { SiFacebook } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
 import NavOne from '../components/NavOne'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+
+  const nav = useNavigate()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSubmit = (event) => {
+    // send data to server for verification
+    setEmail('')
+    setPassword('')
+    event.preventDefault()
+    nav('/dashboard')
+  }
+
   return (
     <>
     <NavOne/>
@@ -20,7 +34,7 @@ const Login = () => {
           <span>OR</span>
           <p></p>
       </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <article className='form-field'>
             <label>email address</label>
             <div>
@@ -28,6 +42,7 @@ const Login = () => {
                   placeholder='Enter email address'
                   type={'email'}
                   required
+                  onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </article>
@@ -38,6 +53,7 @@ const Login = () => {
                     placeholder='Enter password'
                     type={'password'}
                     required
+                    onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
           </article>
