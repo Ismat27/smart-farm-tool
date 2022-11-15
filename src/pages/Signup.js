@@ -5,24 +5,42 @@ import NavOne from '../components/NavOne'
 
 import { SiFacebook } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signup = () => {
 
+    const nav = useNavigate()
+
     const [accountType, setAccountType] = useState('farmer')
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [password2, setPassword2] = useState('')
+    const [designation, setDesignation] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (password !== password2) {
+            alert('passwords do not match')
+            return
+        }
+        nav('/verify-account');
+    }
+
   return (
     <>
         <NavOne />
         <Wrapper className='form-section'>
             <h1>create an account</h1>
             <AccountType accountType={accountType} setAccountType={setAccountType} />
-            <form>
+            <form onSubmit={handleSubmit}>
                 <article className='form-field'>
                     <label>full name</label>
                     <div>
                         <input
                             placeholder='Enter full name'
                             required
+                            onChange={e => setName(e.target.value)}
                         />
                     </div>
                 </article>
@@ -33,6 +51,7 @@ const Signup = () => {
                             placeholder='Enter email address'
                             type={'email'}
                             required
+                            onChange={e => setEmail(e.target.value)}
                         />
                     </div>
                 </article>
@@ -41,7 +60,10 @@ const Signup = () => {
                 <article className='form-field'>
                     <label htmlFor='designation'>designation</label>
                     <div>
-                        <select id='designation'>
+                        <select 
+                            id='designation' 
+                            onChange={e => setDesignation(e.target.value)}
+                        >
                             <option value={''}>select designation</option>
                         </select>
                     </div>
@@ -54,6 +76,7 @@ const Signup = () => {
                             placeholder='Set password'
                             type={'password'}
                             required
+                            onChange={e => setPassword(e.target.value)}
                         />
                     </div>
                 </article>
@@ -64,6 +87,7 @@ const Signup = () => {
                             placeholder='Confirm password'
                             type={'password'}
                             required
+                            onChange={e => setPassword2(e.target.value)}
                         />
                     </div>
                 </article>
