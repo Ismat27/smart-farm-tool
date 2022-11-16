@@ -10,7 +10,7 @@ const NavOne = () => {
             setOpenMenu(prev => !prev)
     }
   return (
-    <Wrapper className='page-center nav-container'>
+    <Wrapper className=''>
         <div className='page-header'>
             <Logo />
             <Hamburger open={openMenu} handleClick={handleClick} />
@@ -39,12 +39,15 @@ const NavOne = () => {
 }
 
 const Wrapper = styled.div`
+width: 90%;
+margin: auto;
 .page-header {
     display: flex;
     justify-content: space-between;
 }
 .nav {
-    text-align: center;
+    ${'' /* text-align: center; */}
+    padding-left: 20px;
     background-color: var(--light-green);
     height: 0;
     overflow: hidden;
@@ -66,8 +69,15 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
 }
 @media (min-width: 768px) {
+    padding-left: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
 .nav {
+    padding-left: 0px;
     height: auto;
+    display: grid;
+    place-items: center;
 }
 .nav-items {
     display: flex;
@@ -91,6 +101,14 @@ li.styled {
 }
 
 }
-
+@media (min-width: 992px) {
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    .nav {
+        display: block;
+        padding-left: 50px;
+    }
+}
 `
 export default NavOne
