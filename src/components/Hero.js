@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import heroImg from '../images/hero.png'
 
-const Hero = () => {
+const Hero = ({getStarted}) => {
+
   return (
     <section>
         <Wrapper className=''>
@@ -16,8 +17,8 @@ const Hero = () => {
                     We provide easy and quick access to botanist consultants for diagnosis of plants’ diseases, for cure, control and prevention.
                 </p>
                 <div className='hero-btns'>
-                    <button className='btn hero-btn'>get started</button>
-                    <button className='btn hero-btn'>learn more</button>
+                    <button className='btn hero-btn' onClick={getStarted} >get started</button>
+                    <button className='btn hero-btn btn-two'>learn more</button>
                 </div>
             </article>
             <div className='img-container'>
@@ -39,16 +40,8 @@ h1 {
     color: var(--light-green);
     margin-top: 20px;
 }
-p {
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0.15em;
-    color: #121212;
-    margin-block: 20px;
-}
 .hero-btns {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -66,9 +59,6 @@ p {
     padding: 30px;
 }
 @media (min-width: 576px) {
-    .hero-btns {
-        flex-direction: row;
-    }
     br {
         display: none;
     }
@@ -77,35 +67,26 @@ p {
     padding-left: 50px;
     width: 100%;
     display: grid;
+    align-items: stretch;
     grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     h1 {
-        margin-top: 80px;
         font-weight: 600;
         font-size: 20px;
-        line-height: 30px;
+        line-height: 50px;
     }
     .hero-text {
         max-width: 350px;
+        padding-block: 50px;
     }
     br {
         display: inline;
     }
-    .hero-btns {
-        flex-direction: column;
-    }
-
 }
 
 @media (min-width: 992px) {
-    padding-left: 50px;
-    display: grid;
-    grid-template-columns: 40% 60%;
     h1 {
-        font-size: 30px;
-        line-height: 50px;
-    }
-    .hero-btns {
-        flex-direction: row;
+        font-size: 25px;
     }
 }
 `

@@ -30,7 +30,7 @@ const NavOne = () => {
                     <NavLink className={'nav-link'} to={'/login'}>sign in</NavLink>
                 </li>
                 <li className='nav-item styled'>
-                    <NavLink className={'nav-link'}>try for free</NavLink>
+                    <NavLink to={'/signup'} className={'nav-link'}>try for free</NavLink>
                 </li>
             </ul>
         </nav>
@@ -44,9 +44,11 @@ margin: auto;
 .page-header {
     display: flex;
     justify-content: space-between;
+    .logo-img {
+        width: 200px;
+    }
 }
 .nav {
-    ${'' /* text-align: center; */}
     padding-left: 20px;
     background-color: var(--light-green);
     height: 0;
@@ -73,41 +75,59 @@ margin: auto;
     width: 100%;
     display: grid;
     grid-template-columns: 40% 60%;
-.nav {
-    padding-left: 0px;
-    height: auto;
-    display: grid;
-    place-items: center;
-}
-.nav-items {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-top: 0;
-    li {
-        padding: 0;
+    grid-template-columns: 50% 50%;
+    .page-header {
+        padding-top: 20px;
+        .logo-img {
+            width: 300px;
+        }
     }
-}
-li.styled {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: var(--deep-green);
-    a {
-        color: white;
+    .nav {
+        padding-left: 0px;
+        padding-top: 40px;
+        height: auto;
+        display: grid;
+        place-items: center;
+        a {
+            font-size: 14px;
+        }
     }
-}
-.menu {
-    display: none;
+    .nav-items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-top: 0;
+        li {
+            padding: 0;
+        }
+    }
+    li.styled {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: white;
+        a {
+            color: var(--deep-green);
+            text-transform: lowercase;
+        }
+    }
+    li.styled:hover {
+        background-color: var(--deep-green);
+        a {
+            color: white;
+        }
+    }
+    .menu {
+        display: none;
+    }
 }
 
-}
 @media (min-width: 992px) {
-    padding-left: 50px;
-    display: grid;
-    grid-template-columns: 40% 60%;
     .nav {
         display: block;
-        padding-left: 50px;
+        padding-left: 25px;
+        a {
+            font-size: 16px;
+        }
     }
 }
 `
