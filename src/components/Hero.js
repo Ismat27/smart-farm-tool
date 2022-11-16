@@ -22,7 +22,7 @@ const Hero = () => {
             </article>
             <div className='img-container'>
                 <div className='orange-circle'>
-                    <img className='farmer' src={heroImg} />
+                    <img className='farmer' alt='farmer' src={heroImg} />
                 </div>
             </div>
         </Wrapper>
@@ -46,9 +46,6 @@ p {
     color: #121212;
     margin-block: 20px;
 }
-.hero-text {
-    max-width: 350px;
-}
 .hero-btns {
     display: flex;
     flex-direction: column;
@@ -68,6 +65,14 @@ p {
     max-height: 400px;
     padding: 30px;
 }
+@media (min-width: 576px) {
+    .hero-btns {
+        flex-direction: row;
+    }
+    br {
+        display: none;
+    }
+}
 @media (min-width: 768px) {
     padding-left: 50px;
     width: 100%;
@@ -79,6 +84,16 @@ p {
         font-size: 20px;
         line-height: 30px;
     }
+    .hero-text {
+        max-width: 350px;
+    }
+    br {
+        display: inline;
+    }
+    .hero-btns {
+        flex-direction: column;
+    }
+
 }
 
 @media (min-width: 992px) {
