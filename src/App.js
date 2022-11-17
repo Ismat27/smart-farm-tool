@@ -16,13 +16,14 @@ function App() {
         <Route path='signup' element={<Signup />}/>
         <Route path='login' element={<Login/>} />
         <Route path='verify-account' element={<VerifyAccount/>} />
-        {/* <Route path='dashboard' element={<DashboardLayout />}>
-          <Route index element={<PlantCareForm/>} />
-          <Route path='plant-care' element={<PlantCareForm/>} />
-        </Route> */}
         <Route element={<DashboardLayout />}>
           <Route path='dashboard' element={<PlantCare/>} />
           <Route path='plant-care' element={<PlantCare/>} />
+          <Route path='live-chat' element={<PlantCare/>} />
+          <Route path='logistics' element={<PlantCare/>} />
+          <Route path='settings' element={<PlantCare/>} />
+          <Route path='notifications' element={<PlantCare/>} />
+          <Route path='forum' element={<PlantCare/>} />
         </Route>
       </Routes>
     </BrowserRouter>
