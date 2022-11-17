@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import styled from 'styled-components'
 import Field from '../components/Field'
 import HowItWorks from '../components/HowItWorks'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => {
   const nav = useNavigate()
@@ -21,12 +22,13 @@ const Home = () => {
       <Hero getStarted={getStarted} learmMore={scrollDown} />
       <Field getStarted={getStarted} />
       <HowItWorks abc={scrollRef} />
+      <Testimonials />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-max-width: 900px;
+max-width: 1000px;
 margin: auto;
 background: white;
 p {
