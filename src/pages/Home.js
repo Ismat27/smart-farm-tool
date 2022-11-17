@@ -8,6 +8,7 @@ import HowItWorks from '../components/HowItWorks'
 import Testimonials from '../components/Testimonials'
 import About from '../components/About'
 import Faq from '../components/Faq'
+import Footer from '../components/Footer'
 
 const Home = () => {
   const nav = useNavigate()
@@ -27,6 +28,7 @@ const Home = () => {
       <Testimonials />
       <About getStarted={getStarted} />
       <Faq />
+      <Footer />
     </Wrapper>
   )
 }

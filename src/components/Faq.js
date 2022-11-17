@@ -7,7 +7,7 @@ const Faq = () => {
     const [current, setCurrent] = useState('')
 
     const toggle = (question) => {
-        if (question == current) {
+        if (question === current) {
             setCurrent('')
         }
         else {
@@ -70,7 +70,7 @@ span {
 }
 .current-faq {
     p {
-        height: 80px;
+        height: auto;
     }
     span {
         transform: rotate(180deg);
