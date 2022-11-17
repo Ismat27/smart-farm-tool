@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import heroImg from '../images/hero.png'
 
-const Hero = ({getStarted}) => {
-
+const Hero = ({getStarted, learmMore}) => {
+    
   return (
     <section>
         <Wrapper className=''>
@@ -18,7 +18,7 @@ const Hero = ({getStarted}) => {
                 </p>
                 <div className='hero-btns'>
                     <button className='btn hero-btn' onClick={getStarted} >get started</button>
-                    <button className='btn hero-btn btn-two'>learn more</button>
+                    <button className='btn hero-btn btn-two' onClick={learmMore}>learn more</button>
                 </div>
             </article>
             <div className='img-container'>
@@ -33,6 +33,9 @@ const Hero = ({getStarted}) => {
 const Wrapper = styled.div`
 width: 90%;
 margin: auto;
+margin-top: 20px;
+display: flex;
+flex-direction: column-reverse;
 h1 {
     font-size: 25px;
     line-height: 30px;
@@ -64,6 +67,7 @@ h1 {
     }
 }
 @media (min-width: 768px) {
+    margin-top: 0px;
     padding-left: 50px;
     width: 100%;
     display: grid;

@@ -5,9 +5,9 @@ import { FaStethoscope } from 'react-icons/fa'
 import { BsCamera } from 'react-icons/bs'
 import {BiMessageRounded} from 'react-icons/bi'
 
-const HowItWorks = () => {
+const HowItWorks = ({abc}) => {
   return (
-    <Wrapper>
+    <Wrapper ref={abc}>
         <h1>
             HOW IT WORKS
         </h1>

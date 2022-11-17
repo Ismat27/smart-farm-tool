@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NavTwo from '../components/NavTwo'
 import Hero from '../components/Hero'
@@ -11,12 +11,16 @@ const Home = () => {
   const getStarted = () => {
     nav('/signup')
   }
+  const scrollRef = useRef(null)
+  const scrollDown = () => {
+    scrollRef.current.scrollIntoView({behavior: 'smooth'})
+  }
   return (
     <Wrapper>
       <NavTwo />
-      <Hero getStarted={getStarted} />
+      <Hero getStarted={getStarted} learmMore={scrollDown} />
       <Field getStarted={getStarted} />
-      <HowItWorks />
+      <HowItWorks abc={scrollRef} />
     </Wrapper>
   )
 }
