@@ -7,6 +7,7 @@ import Field from '../components/Field'
 import HowItWorks from '../components/HowItWorks'
 import Testimonials from '../components/Testimonials'
 import About from '../components/About'
+import Faq from '../components/Faq'
 
 const Home = () => {
   const nav = useNavigate()
@@ -25,6 +26,7 @@ const Home = () => {
       <HowItWorks abc={scrollRef} />
       <Testimonials />
       <About getStarted={getStarted} />
+      <Faq />
     </Wrapper>
   )
 }
