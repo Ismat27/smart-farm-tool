@@ -1,9 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import NavTwo from '../components/NavTwo'
 import Hero from '../components/Hero'
 import styled from 'styled-components'
 import Field from '../components/Field'
-import { useNavigate } from 'react-router-dom'
+import HowItWorks from '../components/HowItWorks'
 
 const Home = () => {
   const nav = useNavigate()
@@ -15,6 +16,7 @@ const Home = () => {
       <NavTwo />
       <Hero getStarted={getStarted} />
       <Field getStarted={getStarted} />
+      <HowItWorks />
     </Wrapper>
   )
 }

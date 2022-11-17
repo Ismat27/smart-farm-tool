@@ -1,8 +1,10 @@
 :root {
   --deep-green: #004B23;
+  --lighter-green: #4C9A2A;
   --light-green: #006400;
   --grey-one: #808080;
   --white-bg: #F8F8F8;
+  --white: #FFFFFF;
   --transition: all 0.3s linear;
 }
 
