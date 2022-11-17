@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Field from '../components/Field'
 import HowItWorks from '../components/HowItWorks'
 import Testimonials from '../components/Testimonials'
+import About from '../components/About'
 
 const Home = () => {
   const nav = useNavigate()
@@ -23,6 +24,7 @@ const Home = () => {
       <Field getStarted={getStarted} />
       <HowItWorks abc={scrollRef} />
       <Testimonials />
+      <About getStarted={getStarted} />
     </Wrapper>
   )
 }
@@ -31,6 +33,18 @@ const Wrapper = styled.div`
 max-width: 1000px;
 margin: auto;
 background: white;
+.section-title {
+  text-align: center;
+  color: var(--deep-green);
+  text-transform: capitalize;
+  margin-bottom: 50px;
+  font-size: 36px;
+  ${'' /* font-weight: 900; */}
+}
+.box {
+  border-radius: 10px;
+  border: 2px solid var(--light-green);
+}
 p {
     font-weight: 500;
     line-height: 30px;

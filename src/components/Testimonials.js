@@ -5,7 +5,7 @@ import testimonials from '../data/testimonials'
 const Testimonials = () => {
   return (
     <Wrapper>
-        <h1>Testimonials</h1>
+        <h1 className='section-title'>Testimonials</h1>
         <div>
             {
                 testimonials.map(({image, name, location, text}) => {
@@ -32,11 +32,6 @@ text-align: center;
 width: 90%;
 margin: auto;
 padding-block: 4rem;
-h1 {
-    color: var(--deep-green);
-    text-transform: capitalize;
-    margin-bottom: 50px;
-}
 div {
     display: grid;
     grid-template-columns: var(--grid-template-columns);

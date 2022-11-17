@@ -8,7 +8,7 @@ import {BiMessageRounded} from 'react-icons/bi'
 const HowItWorks = ({abc}) => {
   return (
     <Wrapper ref={abc}>
-        <h1>
+        <h1 className='section-title'>
             HOW IT WORKS
         </h1>
         <h2>
@@ -46,10 +46,6 @@ const Wrapper = styled.section`
 width: 90%;
 margin: auto;
 padding-block: 2rem 3rem;
-h1 {
-    color: var(--deep-green);
-    text-align: center;
-}
 h2 {
     margin-block: 1.5rem .75rem;
     color: var(--lighter-green);
