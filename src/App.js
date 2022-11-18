@@ -5,7 +5,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import VerifyAccount from './pages/VerifyAccount';
 import DashboardLayout from './components/DashboardLayout';
-// import PlantCareForm from './components/PlantCareForm';
+import CoomingSoon from './components/CoomingSoon';
 import PlantCare from './pages/PlantCare';
 
 function App() {
@@ -19,11 +19,11 @@ function App() {
         <Route element={<DashboardLayout />}>
           <Route path='dashboard' element={<PlantCare/>} />
           <Route path='plant-care' element={<PlantCare/>} />
-          <Route path='live-chat' element={<PlantCare/>} />
-          <Route path='logistics' element={<PlantCare/>} />
-          <Route path='settings' element={<PlantCare/>} />
-          <Route path='notifications' element={<PlantCare/>} />
-          <Route path='forum' element={<PlantCare/>} />
+          <Route path='live-chat' element={<CoomingSoon/>} />
+          <Route path='logistics' element={<CoomingSoon/>} />
+          <Route path='settings' element={<CoomingSoon/>} />
+          <Route path='notifications' element={<CoomingSoon/>} />
+          <Route path='forum' element={<CoomingSoon/>} />
         </Route>
       </Routes>
     </BrowserRouter>
