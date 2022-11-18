@@ -32,7 +32,7 @@ const About = ({ getStarted }) => {
                 <p>
                     Gain access to prompt and accurate diagnosis for plants diseases; and expert care for prevention and control. 
                 </p>
-                <button onClick={getStarted} className='btn'>get started</button>
+                <button onClick={getStarted} className='btn action-btn'>get started</button>
             </article>
             <img alt='lady-farmer' src={lady} />
         </div>

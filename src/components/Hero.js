@@ -17,8 +17,8 @@ const Hero = ({getStarted, learmMore}) => {
                     We provide easy and quick access to botanist consultants for diagnosis of plants’ diseases, for cure, control and prevention.
                 </p>
                 <div className='hero-btns'>
-                    <button className='btn hero-btn' onClick={getStarted} >get started</button>
-                    <button className='btn hero-btn btn-two' onClick={learmMore}>learn more</button>
+                    <button className='btn action-btn' onClick={getStarted} >get started</button>
+                    <button className='btn action-btn action-btn-two' onClick={learmMore}>learn more</button>
                 </div>
             </article>
             <div className='img-container'>

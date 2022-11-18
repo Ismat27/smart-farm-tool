@@ -56,23 +56,9 @@ p {
     color: #121212;
     margin-block: 20px;
 }
-button, .btn-two:hover {
+button {
   width: 200px;
-  border-radius: 10px;
-  border: 2px solid var(--light-green);
-  color: #FFFFFF;
-  background-color: var(--light-green);
-  text-transform: capitalize;
-  letter-spacing: 0.06em;
-  font-weight: 500;
-  font-size: 18px;
 }
-
-.btn-two, button:hover  {
-  color: var(--light-green);
-  background-color: #FFFFFF;
-}
-
 `
 
 export default Home

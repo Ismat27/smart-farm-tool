@@ -10,7 +10,7 @@ const Field = ({getStarted}) => {
             <p>
                 We proudly work with the best Botanist consultants. We provide innovative care, control measures and timely diagnosis to ensure you have a successful and booming farm!
             </p>
-            <button onClick={getStarted} className='btn'>get started</button>
+            <button onClick={getStarted} className='btn action-btn'>get started</button>
         </article>
     </Wrapper>
   )

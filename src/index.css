@@ -62,6 +62,29 @@ header, .page-center {
 .menu-open .last {
   transform: translateY(-8px) rotate(-45deg);
 }
+
+.action-btn  {
+  border-radius: 10px;
+  border: 2px solid var(--light-green);
+  color: #FFFFFF;
+  background-color: var(--light-green);
+  text-transform: capitalize;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  font-size: 18px;
+}
+.action-btn:hover {
+  background-color: #FFFFFF;
+  color: var(--light-green);
+}
+.action-btn-two {
+  color: var(--light-green);
+  background-color: #FFFFFF;
+}
+.action-btn-two:hover {
+  color: var(--white);
+  background-color: var(--light-green);
+}
 .sidebar {
   transform: translate(-100%);
   transition: var(--transition);

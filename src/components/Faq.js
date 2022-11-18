@@ -60,7 +60,7 @@ p {
     height: 0;
     overflow: hidden;
     margin: 0 !important;
-    color: var(--light-green);
+    color: var(--light-green)  !important;
 }
 h2 {
     font-size: 20px;

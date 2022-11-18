@@ -27,6 +27,9 @@ const DashboardLayout = () => {
 
 const Wrapper = styled.div`
 position: relative;
+${'' /* max-width: 1200px;
+margin: auto; */}
+background-color: var(--white);
 .page-container {
     flex: auto;
     padding: 10px 10px;

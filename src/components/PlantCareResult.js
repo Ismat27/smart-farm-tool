@@ -1,10 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { usePlantCare } from '../plant_care_context'
 
 const PlantCareResult = () => {
     const { plantImage, returnHome} = usePlantCare()
 
+    const nav = useNavigate()
 
   return (
     <Wrapper>
@@ -44,7 +46,7 @@ const PlantCareResult = () => {
             </article>
         </div>
         <div className='action-btns'>
-            <button className='btn chat'>Chat with Expert</button>
+            <button className='btn chat' onClick={() => nav('/live-chat')}>Chat with Expert</button>
             <button onClick={() => returnHome()} className='btn return-home'>Return Home</button>
         </div>
     </Wrapper>
