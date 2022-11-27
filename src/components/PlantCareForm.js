@@ -70,7 +70,6 @@ const PlantCareForm = () => {
 }
 
 const Wrapper = styled.section`
-max-width: 500px;
 h1 {
     font-weight: 500;
     font-size: 32px;
@@ -81,17 +80,17 @@ h1 {
 .upload-container {
   border: 2px dashed var(--grey-one);
   border-radius: 10px;
-  max-width: 500px;
-  padding: 40px;
+  padding: 40px 20px;
   margin-block: 30px 15px;
+  text-align: center;
   label {
     cursor: pointer;
     text-align: center;
     display: block;
   }
 p {
-    margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 40px;
+    font-size: 20px;
 }
 svg {
     font-size: 40px;
@@ -121,6 +120,9 @@ svg {
     margin-top: 100px;
 }
 @media (min-width: 768px) {
+    .upload-container {
+        padding: 80px 40px;
+    }
     .upload-container, .form-submit {
         margin-left: 40px;
     }

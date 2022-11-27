@@ -13,11 +13,11 @@ const DashboardLayout = () => {
     <Wrapper>
         <Sidebar />
         <div className='page-container'>
-            <div className='header'>
+            <div className='header page-center'>
                 <Hamburger open={isSidebarOpen} handleClick={openSidebar} />
                 <Logo />
             </div>
-            <main>
+            <main className='page-center content'>
                 <Outlet />
             </main>
         </div>
@@ -27,27 +27,39 @@ const DashboardLayout = () => {
 
 const Wrapper = styled.div`
 position: relative;
-${'' /* max-width: 1200px;
-margin: auto; */}
+min-height: 100vh;
+max-width: 1440px;
+margin: auto;
 background-color: var(--white);
 .page-container {
     flex: auto;
-    padding: 10px 10px;
 }
 .header {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+}
+main {
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+
 }
 @media (min-width: 992px) {
     display: flex;
     .header {
         justify-content: flex-end;
+        padding-block: 30px 80px;
     }
     .menu {
         display: none;
     }
     .header img {
         width: 300px;
+    }
+    .page-center {
+        max-width: 900px;
     }
 }
 `

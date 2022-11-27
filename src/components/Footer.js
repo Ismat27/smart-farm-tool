@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <Wrapper>
         <div className='footer-content'>
-            <Link>
+            <Link to={'/'}>
                 <img className='footer-logo' alt='footer-logo' src={footerLogo} />
             </Link>
             <div className='idk'>
