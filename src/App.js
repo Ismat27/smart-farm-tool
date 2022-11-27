@@ -7,6 +7,7 @@ import VerifyAccount from './pages/VerifyAccount';
 import DashboardLayout from './components/DashboardLayout';
 import CoomingSoon from './components/CoomingSoon';
 import PlantCare from './pages/PlantCare';
+import LiveChat from './pages/LiveChat';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route element={<DashboardLayout />}>
           <Route path='dashboard' element={<PlantCare/>} />
           <Route path='plant-care' element={<PlantCare/>} />
-          <Route path='live-chat' element={<CoomingSoon/>} />
+          <Route path='live-chat' element={<LiveChat/>} />
           <Route path='logistics' element={<CoomingSoon/>} />
           <Route path='settings' element={<CoomingSoon/>} />
           <Route path='notifications' element={<CoomingSoon/>} />
