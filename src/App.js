@@ -8,6 +8,7 @@ import DashboardLayout from './components/DashboardLayout';
 import CoomingSoon from './components/CoomingSoon';
 import PlantCare from './pages/PlantCare';
 import LiveChat from './pages/LiveChat';
+import Forum from './pages/Forum';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path='logistics' element={<CoomingSoon/>} />
           <Route path='settings' element={<CoomingSoon/>} />
           <Route path='notifications' element={<CoomingSoon/>} />
-          <Route path='forum' element={<CoomingSoon/>} />
+          <Route path='forum' element={<Forum/>} />
         </Route>
       </Routes>
     </BrowserRouter>
