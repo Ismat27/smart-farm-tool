@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { formatTime } from './utils'
 
 const times = [10, 11, 12, 13, 14, 15, 16]
 
@@ -10,24 +11,13 @@ const TimePicker = ({time, setTime}) => {
         <article className='times'>
             {
                 times.map(t => {
-                    if (t===12) {
-                        return (
-                            <button 
-                                className={`${t===time ? 'time-btn active' : 'time-btn'}`} 
-                                key={t}
-                                onClick={() => setTime(t)}
-                            >
-                                {t}:00 pm
-                            </button>
-                        )
-                    }
                     return (
                         <button 
                             className={`${t===time ? 'time-btn active' : 'time-btn'}`} 
                             key={t}
                             onClick={() => setTime(t)}
                         >
-                            {t % 12}:00 {t >12? 'pm': 'am'}
+                            {formatTime(t)}
                         </button>
                     )
                 })

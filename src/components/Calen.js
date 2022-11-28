@@ -21,6 +21,7 @@ const Wrapper = styled.div`
         background-color: var(--white);
         border: none;
         padding: 10px 20px;
+        cursor: pointer;
     }
 
     .react-calendar__month-view__weekdays__weekday {

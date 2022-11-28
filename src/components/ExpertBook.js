@@ -3,16 +3,10 @@ import styled from 'styled-components'
 import { BsCalendar } from 'react-icons/bs'
 import { IoMdTimer } from 'react-icons/io'
 import { TbCalendarTime } from 'react-icons/tb'
+import { formatTime, formatDate, formatMonth } from './utils'
 
-const formatTime = (time) => {
-    let unit = 'pm';
-    if (time < 12) {
-        unit = 'am'
-    }
-    return `${time > 12 ? time % 12 : time}:00 ${unit}`
-}
+const ExpertBook = ({time, date, month, year}) => {
 
-const ExpertBook = ({time}) => {
   return (
     <Wrapper>
         <article>
@@ -27,7 +21,7 @@ const ExpertBook = ({time}) => {
                 <BsCalendar />
             </span>
             <div>
-                <p>31st December, 2022</p>
+                <p>{formatDate(date)} {formatMonth(month)}, {year}</p>
                 <p>Date</p>
             </div>
         </article>

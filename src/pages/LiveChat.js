@@ -9,11 +9,12 @@ const LiveChat = () => {
     const [val, setValue] = useState(new Date())
     const [time, setTime] = useState(10)
 
+    const date = val.getDate()
+    const month = val.getMonth() + 1
+    const year = val.getFullYear()
+
     const onChange = (value) => {
         setValue(value)
-        // const month = value.getMonth() + 1
-        // const year = value.getFullYear() 
-        // const date = value.getDate()
     }
 
   return (
@@ -22,7 +23,7 @@ const LiveChat = () => {
         <div className='content'>
             <Calen value={val} onChange={onChange} />
             <TimePicker time={time} setTime={setTime} />
-            <ExpertBook time={time} />
+            <ExpertBook time={time} date={date} month={month} year={year} />
         </div>
         <button className='btn form-submit'>book chat</button>
     </Wrapper>
@@ -48,7 +49,6 @@ h1 {
         grid-template-columns: repeat(2, auto)
         gap: 20px;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -61,6 +61,7 @@ h1 {
     }
     .content {
         grid-template-columns: 350px 200px 250px;
+        margin-bottom: 80px;
     }
 }
 `
