@@ -123,9 +123,6 @@ svg {
     .upload-container {
         padding: 80px 40px;
     }
-    .upload-container, .form-submit {
-        margin-left: 40px;
-    }
     .notes-container {
         padding-left: 60px;
     }
