@@ -33,4 +33,42 @@ const messages = [
     },
 ]
 
-export { messages }
+const topics = [
+    'tomatoes', 'harvest', 'flood', 'pest',
+    'fumigation', 'erosion'
+]
+
+const members = [
+    {
+        id: 1,
+        first_name: 'kenneth',
+        last_name: 'igwe',
+        image: ''
+    },
+    {
+        id: 2,
+        first_name: 'ibrahim',
+        last_name: 'idris',
+        image: ''
+    },
+    {
+        id: 3,
+        first_name: 'ruth',
+        last_name: 'giwa',
+        image: ''
+    },
+    {
+        id: 4,
+        first_name: 'nonso',
+        last_name: 'diabu',
+        image: ''
+    },
+    {
+        id: 5,
+        first_name: 'bukola',
+        last_name: 'ayepe',
+        image: ''
+    },
+]
+
+export { messages, topics, members }

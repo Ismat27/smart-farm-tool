@@ -24,6 +24,9 @@ ul {
 img {
   max-width: 100%;
 }
+button {
+  cursor: pointer;
+}
 body {
   margin: 0;
   background: var(--white-bg);
@@ -106,7 +109,10 @@ header, .page-center {
   letter-spacing: 0.25px;
   margin-block: 20px 35px;
 }
-
+.div-title {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
 @media (min-width: 768px) {
  .nav-container {
     display: flex;
