@@ -9,6 +9,7 @@ import CoomingSoon from './components/CoomingSoon';
 import PlantCare from './pages/PlantCare';
 import LiveChat from './pages/LiveChat';
 import Forum from './pages/Forum';
+import DashboardHome from './pages/DashboardHome';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path='login' element={<Login/>} />
         <Route path='verify-account' element={<VerifyAccount/>} />
         <Route element={<DashboardLayout />}>
-          <Route path='dashboard' element={<PlantCare/>} />
+          <Route path='dashboard' element={<DashboardHome/>} />
           <Route path='plant-care' element={<PlantCare/>} />
           <Route path='live-chat' element={<LiveChat/>} />
           <Route path='logistics' element={<CoomingSoon/>} />
