@@ -41,6 +41,7 @@ const DashboardHome = () => {
 }
 
 const Wrapper = styled.section`
+padding-top: 1.25rem;
 .abc {
   display: grid;
   gap: 40px 20px;
@@ -57,6 +58,7 @@ const Wrapper = styled.section`
   }
   
 @media (min-width: 768px) {
+  padding-top: 0rem;
   .abc {
     grid-template-columns: 50% 50%;
     gap: 20px;

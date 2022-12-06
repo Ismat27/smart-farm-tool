@@ -40,7 +40,7 @@ background-color: var(--white);
     padding-top: 20px;
 }
 main {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -50,7 +50,7 @@ main {
     display: flex;
     .header {
         justify-content: flex-end;
-        padding-block: 30px 80px;
+        padding-block: 30px 40px;
     }
     .menu {
         display: none;

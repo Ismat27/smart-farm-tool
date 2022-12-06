@@ -14,11 +14,8 @@ const cropsData = [
 ]
 
 const addToDate = (days) => {
-    const factor = 24 * 60 * 60 * 1000
     const today = new Date()
     let newDate = today.setDate(today.getDate() + days)
-    const interval = new Date(newDate) - new Date()
-    console.log(interval/factor);
     return new Date(newDate)
 }
 

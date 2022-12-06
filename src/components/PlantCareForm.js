@@ -75,7 +75,7 @@ h1 {
     font-size: 32px;
     line-height: 120%;
     letter-spacing: 0.25px;
-    margin-block: 40px 15px;
+    margin-block: 20px 15px;
 }
 .upload-container {
   border: 2px dashed var(--grey-one);
