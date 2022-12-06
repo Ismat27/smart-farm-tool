@@ -2,14 +2,39 @@ import React from 'react'
 import styled from 'styled-components'
 import { BsFillCameraFill, BsPersonFill } from 'react-icons/bs'
 import NavOne from '../components/NavOne'
+import Modal from '../components/Modal'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const VerifyAccount = () => {
+
+    const [showModal, setShowModal] = useState(false)
+    const nav = useNavigate()
+
+    const closeModal = () => {
+        setShowModal(false)
+        nav('/dashboard')
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        setShowModal(true)
+    }
+
   return (
     <>
+        {
+            showModal &&
+        <Modal 
+            text={'You have completed your verification successfully.'}
+            btnText={'Done'}
+            closeFunc={closeModal}
+        />
+        }
         <NavOne />
         <Wrapper className='form-section'>
             <h1>Let's get to know you better. Verify your identity.</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
 
                 <article className='form-field'>
                     <label htmlFor='phone-number'><h2>Phone Number</h2></label>
