@@ -5,10 +5,16 @@ import StackedBar from '../charts/StackedBar'
 import LineChart from '../charts/LineChart'
 
 import { upcomingData } from '../data/dashboard'
+import DueTasks from '../components/DueTasks'
+import Weather from '../components/Weather'
 
 const DashboardHome = () => {
   return (
     <Wrapper>
+      <div className='abc'>
+        <Weather />
+        <DueTasks />
+      </div>
         <div className='abc'>
           <DoughnutChart />
           <StackedBar />
