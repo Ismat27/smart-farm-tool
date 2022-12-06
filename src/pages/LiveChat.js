@@ -3,11 +3,22 @@ import styled from 'styled-components'
 import ExpertBook from '../components/ExpertBook'
 import TimePicker from '../components/TimePicker'
 import Calen from '../components/Calen'
+import Modal from '../components/Modal'
+import { useNavigate } from 'react-router-dom'
+import { usePlantCare } from '../plant_care_context'
 
 const LiveChat = () => {
 
+    const {
+        setDiagnosed,
+        setPlantImage,
+        setPlantFile
+    } = usePlantCare()
+        
     const [val, setValue] = useState(new Date())
     const [time, setTime] = useState(10)
+    const [showModal, setShowModal] = useState(false)
+    const nav = useNavigate()
 
     const date = val.getDate()
     const month = val.getMonth() + 1
@@ -17,16 +28,40 @@ const LiveChat = () => {
         setValue(value)
     }
 
+    const bookChat = (event) => {
+        event.preventDefault()
+        setShowModal(true)
+        setPlantFile('')
+        setPlantImage('')
+        setDiagnosed(false)
+    }
+
+    const closeModal = () => {
+        setValue(new Date())
+        setShowModal(false)
+        nav('/dashboard')
+    }
+
   return (
-    <Wrapper>
-        <h1>Book A Live Chat with an Expert</h1>
-        <div className='content'>
-            <Calen value={val} onChange={onChange} />
-            <TimePicker time={time} setTime={setTime} />
-            <ExpertBook time={time} date={date} month={month} year={year} />
-        </div>
-        <button className='btn form-submit'>book chat</button>
-    </Wrapper>
+    <>
+        {
+            showModal &&
+            <Modal 
+                text={'You have successfully booked a chat.'}
+                btnText={'done'}
+                closeFunc={closeModal}
+            />
+        }
+        <Wrapper>
+            <h1>Book A Live Chat with an Expert</h1>
+            <div className='content'>
+                <Calen value={val} onChange={onChange} />
+                <TimePicker time={time} setTime={setTime} />
+                <ExpertBook time={time} date={date} month={month} year={year} />
+            </div>
+            <button className='btn form-submit' onClick={bookChat}>book chat</button>
+        </Wrapper>
+    </>
   )
 }
 

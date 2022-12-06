@@ -27,7 +27,6 @@ const PlantCareForm = () => {
         }
         const formData = new FormData()
         formData.append('plant', plantFile, plantFile.name)
-        console.log(formData.get('plant'));
         // set image to server for diagnosis
         setDiagnosed(true)
     }
