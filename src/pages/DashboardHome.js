@@ -47,18 +47,16 @@ padding-top: 1.25rem;
   gap: 40px 20px;
   margin-bottom: 2.5rem;
 }
-  .chart {
-    display: grid;
-    place-items: center;
-    max-width: 400px;
-  }
-  .chart-title {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
+.chart {
+  display: grid;
+  place-items: center;
+}
+.chart-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
-  padding-top: 0rem;
   .abc {
     grid-template-columns: 50% 50%;
     gap: 20px;
@@ -66,9 +64,11 @@ padding-top: 1.25rem;
   }
   .chart {
     display: block;
+    max-width: 400px;
   }
 }
 @media (min-width: 992px) {
+  padding-top: 0rem;
   .abc {
     grid-template-columns: auto auto;
     gap: 50px;
