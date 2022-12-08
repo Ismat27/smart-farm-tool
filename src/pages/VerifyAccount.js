@@ -68,6 +68,7 @@ const VerifyAccount = () => {
                             <input 
                                 type={'file'}
                                 className='file-input'
+                                accept="image/*"
                             />
                         </label>
                     </article>
@@ -78,6 +79,7 @@ const VerifyAccount = () => {
                             <input 
                                 type={'file'}
                                 className='file-input'
+                                accept="image/*"
                             />
                         </label>
                     </article>
@@ -91,6 +93,7 @@ const VerifyAccount = () => {
                                 className='file-input'
                                 name='selfie'
                                 type={'file'}
+                                accept="image/*"
 
                             />
                             <BsPersonFill />

@@ -33,6 +33,8 @@ const NavOne = () => {
 }
 
 const Wrapper = styled.div`
+padding-top: 10px;
+max-width: var(--home-max-width);
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -61,6 +63,9 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
 }
 @media (min-width: 768px) {
+.logo-img {
+    width: 300px;
+}
 .nav {
     height: auto;
 }

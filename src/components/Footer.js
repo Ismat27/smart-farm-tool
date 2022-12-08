@@ -71,6 +71,7 @@ padding-block: 40px 20px;
 }
 .footer-content {
     width: 90%;
+    max-width: var(--home-max-width);
     margin: auto;
 }
 .footer-logo {

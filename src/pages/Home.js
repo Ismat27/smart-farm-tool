@@ -20,21 +20,23 @@ const Home = () => {
     scrollRef.current.scrollIntoView({behavior: 'smooth'})
   }
   return (
-    <Wrapper>
-      <NavTwo />
-      <Hero getStarted={getStarted} learmMore={scrollDown} />
-      <Field getStarted={getStarted} />
-      <HowItWorks abc={scrollRef} />
-      <Testimonials />
-      <About getStarted={getStarted} />
-      <Faq />
+    <>
+      <Wrapper>
+        <NavTwo />
+        <Hero getStarted={getStarted} learmMore={scrollDown} />
+        <Field getStarted={getStarted} />
+        <HowItWorks abc={scrollRef} />
+        <Testimonials />
+        <About getStarted={getStarted} />
+        <Faq />
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   )
 }
 
 const Wrapper = styled.div`
-max-width: 1000px;
+max-width: var(--home-max-width);
 margin: auto;
 background: white;
 .section-title {
